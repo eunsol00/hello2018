@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8">
+<title>메뉴바 만들기</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+
+a:link, a:active, a:visited, a:hover {text-decoration: none;}
+a:link, a:active, a:visited {color:black;}
+
+div{width: 100%; padding: 2em; position: relative;}
+img{width: 160px; margin: auto;}
+
+
+nav{width: 1000px; margin:auto; height:44px;}
+nav #logo{width:200px;  height:44px; float: left;}
+nav #logo a{display:block;  text-align: center; line-height: 44px;}
+nav #logo a:hover{color:black; background: yellow;}
+nav #menuList{ float: right; margin:0; padding:30px;}
+nav #menuList .menu-item{ list-style: none; float: left; width:150px; height:44px;}
+nav #menuList a{display: block; height: 44px; text-align: center; line-height:44px;}
+nav #menuList a:hover{color: black; background: yellow;}
+
+.contents2{padding-left:20px; top:50px;margin:auto;width:1000px;text-align: center; position: relative; }
+.contents{ padding: 2em;  width:800px; height:400px; text-align: center; }
+.imagebox1{width:800px; float:left; overflow hidden; }
+ .imagebox1 img{text-align:center; width: 300px; margin-right:1em; margin-left:2em; } 
+ .clear{clear:both;}
+
+#text1{background: white;text-align: center;}
+
+p{line-height: 25px;}
+
+
+</style>
+</head>
+<body>
+	<nav>
+		<div id="logo">
+			<a href="index.html">List example</a>
+		</div>
+		<ul id="menuList">
+			<li class="menu-item">
+				<a href="http://naver.com" target="_blank">menu</a>
+			</li>
+				<li class="menu-item">
+				<a href="http://naver.com" target="_blank">menu2</a>
+			</li>	
+
+			<li class="menu-item">
+				<a href="http://naver.com" target="_blank">menu3</a>
+			</li>	
+
+			<li class="menu-item">
+				<a href="http://naver.com" target="_blank">menu4</a>
+			</li>
+</ul>
+</nav>
+
+<div class="contents2">
+<div class="contents">
+	<div class="imagebox1">
+ <img src="./img/pantone.jpg"><br>
+    <img src="./img/pantone2.jpg">
+	<h1 id="text1">Pantone</h1>
+		<p> 팬톤이 선정했던 색상들을 소개하는 페이지를 만들고 싶습니다.<br>
+딱 2000년부터 시작된거라 5년씩 끊어서 전체 연도를 설명하고 내용은 그 해 올해의 컬러를 반영했던 상품들을 소개하면서 선정된 이유나 반응들로 꾸밀 생각입니다.</p>
+</div>
+
+</div>
+  <div class="clear"></div>
+	</div>
+</div>
+
+<div class="contents2">
+<div class="contents">
+	<div class="imagebox1">
+ <img src="./img/mascot.jpg">
+	<h1 id="text1">동계올림픽 마스코트</h1>
+	<p>다음으로 생각해본 주제는 역대 동계올림픽 마스코트를 소개하는 페이지입니다.<br>
+수도 적당하고 각 캐릭터마다 이름이나 성격들도 붙어있어서 정리해서 소개하면 재밌을 것 같습니다.</p>
+
+</div>
+</div>
+
+</div>
+  <div class="clear"></div>
+	</div>
+
+</body>
+</html>
