@@ -24,7 +24,7 @@
 
 
 	    h1,h2,h3,h4,h5,h6,p, {font-family: "source-han-serif-korean",serif; font-weight:600;}
-		h1{text-align: left; font-size:15em; position: absolute; line-height: 1.58; left: 450px; top: 180px; font-weight: bold;}
+		h1{text-align: left; font-size:15em; position: absolute; line-height: 1.58; left: 450px; top: 20px; font-weight: bold;}
 		h2{text-align: left; font-size:1.7em; position: absolute; line-height: 1.58;} 
         h3{text-align: left; font-size:15em; position: absolute; line-height: 1.58; opacity: 0.8; font-weight: 600;} 
 		h4{text-align: left; font-size:2.5em; position: absolute; line-height: 1.58; }
