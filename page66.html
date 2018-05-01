@@ -6,173 +6,56 @@
 		<link rel="stylesheet" type="text/css" href="normalize.css">
 		<title>one scroll page5</title>
 
-		<style>
-		*{padding: 0; font-family: 'Nanum Myeongjo', serif; font-weight: 400; margin: auto;}
-		div{width: 100%; padding: 1em; position: relative;}
-		img{width: 1640px; margin: auto;}
-		body{text-align:center; background:#0e716b;}
-
-		.wrap{width: 1800px; margin:auto; position: relative}
-		.greeen{background: #0e716b;}
-        .quote {border-left: 0.2em solid white;padding: 2.2em;}
-        
-        
-
-        .box{text-align:left;width:400px; height:900px; background:#0e716b; float:left; margin:1em; margin-top:100px;}   
-        .imagebox {text-align:none; height: 480px; overflow hidden; }
-        .imagebox img{text-align:left; width: 88%; margin-right:1em; margin-left:1em; } 
-        .clear{clear:both;}
-
-        
-
-        .footbox{width:300px; height:200px; left:155px; float:left; margin-top:8em; text-align: left;}
-        .imagebox2 {height: 300px; overflow hidden;  margin:0px; right:25px;}
-        .imagebox2 img{width: 70%; margin:0px;}
-    
-
-
-	    h1,h2,h3,h4,h5,h6,p, {font-family: "source-han-serif-korean",serif; font-weight:600;}
-		h1{text-align: left; font-size:15em; position: absolute; line-height: 1.58; left: 450px; top: 180px; font-weight: bold;}
-		h2{text-align: left; font-size:1.7em; position: absolute; line-height: 1.58;} 
-        h3{text-align: left; font-size:15em; position: absolute; line-height: 1.58; opacity: 0.8; font-weight: 600;} 
-		h4{text-align: left; font-size:2.5em; position: absolute; line-height: 1.58; }
-
-		h5{font-size: 1.25em; height:80px; line-height: 1.58;  margin:0; padding-right: 0.5em; ;font-weight: bold; color:white;}
-		h6{font-size: 1.25em; height:300px; line-height:1.58; background-color:#c6bc8d; overflow: hidden; color:black; padding-left: 1.7em; padding-right: 1.3em; padding-top:2em; padding-bottom:2em;margin-top:1em; margin-bottom:3em;}
-
-		p{text-align: left; font-size:1.25em; position: absolute;  color: white;  font-weight: 600; line-height:1.75em;}
-
-
-#t_box{width: 1800px; height: 1700px; margin: auto;}
-#t_tbox1{width: 1800px; height:30px;top: 140px; margin: auto; color: white;}
-#chart1{position:absolute; top: 550px; left: 370px; writing-mode:tb-rl;
- -webkit-transform:rotate(90deg);
- -moz-transform:rotate(90deg);
- -o-transform: rotate(90deg);
- white-space:nowrap;
- display:block;
- bottom:0;}
-
-#chart2{position:absolute; top: 1000px; left: 500px;
-		writing-mode:tb-rl;
- -webkit-transform:rotate(90deg);
- -moz-transform:rotate(90deg);
- -o-transform: rotate(90deg);
- white-space:nowrap;
- display:block;
- bottom:0;}
-
-
-		#chart3{position:absolute; top: 10px; right: 150px; opacity: 0.4;}
-		#number_position{position: absolute; left: 1200px; top: 450px;}
-		#number_position2{position: absolute; left: 250px; top: 0px;}
-
-		#m_box1{width: 1800px; top: 20px; height: 1220px; margin: auto; color: white;}
-		#m_box2{width: 1800px; top:0px; height: 600px; margin:auto; color: white;}
-		#m_box3{height: 1350px; margin:auto; color: white;}
-		#m_box4{width: 1800px; height: 950px; margin:auto; color: white;}
-		#m_box5{width: 1800px; height: 1650px; margin:auto; color: white;}
-		  #m_box55{width: 1500px; left:50px; height:850px; color: white;}
-		#m_box6{width: 1000px; height: 1350px; margin:auto; color: white;}
-		#m_box7{width: 1800px; height: 700px; margin:auto; color: white; top:10px;}
-		#m_box77{position: absolute;width: 1720px; height: 440px; margin:auto; left:10px;}
-		#m_box8{position: absolute;width: 600px; height: 590px; color: white; right: 850px; top:2910px;}
-		#m_box9{position: absolute;width: 600px; height: 570px; color: white; left: 940px; top:2910px;}	
-	
-
-
-		#title_img1 {width: 1500px;}
-		#title_img1_1 {position: absolute;width: 1500px; top:235px; left:200px;}
-		#title_img2 {position: absolute; width: 750px; left:160px;}
-		#title_img3 {position: absolute; width: 1000px; left: 400px; top: 40px;}
-		#title_img4 {width: 83%; top: 40px;}
-		#title_img45 {width: 100%; top: 40px;}
-		#title_img5 {position: absolute; width: 1420px; right: 200px; bottom: 500px;}
-		 #mel{position: absolute; width: 100px; height: 110px; left: 820px; top:290px;}
-		#title_img6 {position: absolute; width: 1900px;}
-
-		#title_text1_1{position: absolute; bottom: 280px; left: 290px; font-weight: 600; line-height:1.75em;}
-		#title_text1_2{position: absolute; bottom: 180px; left: 1000px; font-weight: 600; line-height:1.75em;}
-		#title_text1_22{position: absolute;left: 660px; font-weight: 600; line-height:1.75em; bottom:0px; font-weight:700; font-size: 6em;}
-	    #title_text1_3{position: absolute; left: 560px; font-weight: 700;}
-		#title_text1_4{position: absolute; bottom: 70px; left: 250px; font-weight: 700;}
-        #title_text1_5{position: absolute;  top: 320px; left: 330px; font-weight: 600; line-height:1.75em;}
-        #title_text1_55{position: absolute; top: 680px; left: 485px; font-weight: 600; line-height:1.75em;}
-		#title_text1_6{position: absolute;  bottom: 220px; left: 710px; font-weight: 400;}
-		#title_text1_7{position: absolute; left: 715px;  bottom: 20px;  font-weight: 400; color:white; opacity: 0.6}
-		#title_text1_7{position: absolute; left:575px; top:575px;}
-		#title_text1_8{position: absolute; bottom: 5px; left:775px; text-align: center;}
-        #title_text1_9{position: absolute; left: 205px; top:1px;text-align: left; font-size:3.5em; line-height: 1.58; writing-mode: tb-rl; color: white;}
-        #title_text1_10 {text-align: left; font-size:3.5em; position: absolute; line-height: 1.58; color: black; font-weight: bold; top:480px; left:270px;}
-
-
- #title_text1_11 {text-align: left; font-size:1.2em; white-space: 15em; color: white;}
- #title_text1_12 {text-align: left; font-size:1.3em; white-space: 15em; color: white; font-weight: bold;height:40px; margin:0; padding-right: 0.5em; font-weight: 800;}
-
-		#cp{position: absolute; font-weight: 600; width: 280px; height: 375px; left: 40px; top:100px;}
-		 #cp_{position: absolute; font-weight: 600; width: 280px; height: 375px; top: 430px;}
-		#cp1{position: absolute; font-weight: 600; top: 150px; left: 370px; width: 280px; height: 375px;}
-		 #cp_1{position: absolute; font-weight: 600; top: 480px; left: 350px; width: 300px; height: 375px;}
-		#cp2{position: absolute; font-weight: 600; left: 700px; width: 280px; height: 375px; top:100px;}
-		 #cp_2{position: absolute; font-weight: 600; left: 680px; width: 300px; height: 375px;top: 430px;}
-		#cp3{position: absolute; font-weight: 600; top: 550px; width: 280px; height: 375px;left: 40px;}
-		 #cp_3{position: absolute; font-weight: 600; top: 880px; width: 300px; height: 375px;}
-		#cp4{position: absolute; font-weight: 600; left: 370px; top: 600px; width: 280px; height: 375px;}
-		 #cp_4{position: absolute; font-weight: 600; left: 350px; top: 930px; width: 280px; height: 375px;}
-		#cp5{position: absolute; font-weight: 600;left: 700px; top: 550px;  width: 280px; height: 375px;}
-	     #cp_5{position: absolute; font-weight: 600;left: 680px; top: 880px;  width: 280px; height: 375px;}
-
-	     #foot_box{width: 1570px; right:15px; top:570px; height: 420px; background:black;}
-
-		#image_arrange{width: 1840px; margin: auto;}
-	
-		</style>
+		<link rel="stylesheet" href="style.css">
+    <meta type="og image" contents="thumnail.g">
+    <meta type="og title" contents="Mayhem 영화리뷰">
+    <meta type="og description" contents="영화 Mayhem울 소개합니다.">
 	</head>
 
 	<body>
-			<div class="wrap"><div id="t_box">
-			 <div id="t_tbox1">			
-			<img src="./img/d.png" id="title_img1" >
-			<h1>Mayhem</h1>
-			<h2 id="chart1">RLJE L ｜ FILMS 제공<br>장르 : 미국, 액션, 공포, 코미디</h2>	
-			<h2 id="chart2">Mayhem : 아수라장, 개판</h2>
-			</div>
-		</div>
+      <div class="wrap"><div id="t_box">
+       <div id="t_tbox1">     
+      <img src="./img/d.png" id="title_img1" >
+      <h1>Mayhem</h1>
+      <h2 id="chart1">RLJE L ｜ FILMS 제공<br>장르 : 미국, 액션, 공포, 코미디</h2>  
+      <h2 id="chart2">Mayhem : 아수라장, 개판</h2>
+      </div>
+    </div>
 
-		    <div id="m_box1">
-			<img src="./img/1.png" id="title_img1">
-			<h3 id="number_position">#01</h3>
-			<p class="quote" id="title_text1_1"> Tower-Smythe라는 거대 법률 사무소에 다니는 주인공. 데릭(스티븐 연)은 평소와 다름없이 출근해서 하루에 밀린 일과들을 처리하기<br>
-				시작한다. 입사할 땐 풋풋함과 패기넘치는 변호사였지만, 과도한 업무와 스트레스는 그를 업무능력과 직급에 목매는 변호사로 만들었다.<br>
+        <div id="m_box1">
+      <img src="./img/1.png" id="title_img1">
+      <h3 id="number_position">#01</h3>
+      <p class="quote" id="title_text1_1"> Tower-Smythe라는 거대 법률 사무소에 다니는 주인공. 데릭(스티븐 연)은 평소와 다름없이 출근해서 하루에 밀린 일과들을 처리하기<br>
+        시작한다. 입사할 땐 풋풋함과 패기넘치는 변호사였지만, 과도한 업무와 스트레스는 그를 업무능력과 직급에 목매는 변호사로 만들었다.<br>
                 여느 때와 같이 승승장구 하며 상승기류를 타던 그. 마침내 중요 인사 위치에 올라갈 수 있는 기회를 잡게 되었으나 그의 초고속 승진을<br>
                 아니꼬워하던 상사 사이렌의 방해로 모든 일이 꼬여버린다. 
-			</p>
-			           <h4 id="title_text1_22"> Siren </h4>
-		</div>
+      </p>
+                 <h4 id="title_text1_22"> Siren </h4>
+    </div>
 
-		   <div id="m_box2">
+       <div id="m_box2">
 
            <img src="./img/2.png" id="title_img2" >
-			<p class="quote" id="title_text1_2"> 사이렌은 자신이 맡았던 건의 실패를 그에게 떠넘겨 버리는<br>
-				방식으로 큰 실수를 바꿔치기 한다. 졸지에 모든 죄를 뒤집어<br>
-				쓰게 된 데릭은 억울한 마음과 참을 수 없는 분노에 휩싸이고<br>
-				사장 존 타워스(스티븐 브랜든)에게 찾아가 항의 해보지만<br>
-				그의 말은 무참히 묵살당하고 만다.
-			</p>
+      <p class="quote" id="title_text1_2"> 사이렌은 자신이 맡았던 건의 실패를 그에게 떠넘겨 버리는<br>
+        방식으로 큰 실수를 바꿔치기 한다. 졸지에 모든 죄를 뒤집어<br>
+        쓰게 된 데릭은 억울한 마음과 참을 수 없는 분노에 휩싸이고<br>
+        사장 존 타워스(스티븐 브랜든)에게 찾아가 항의 해보지만<br>
+        그의 말은 무참히 묵살당하고 만다.
+      </p>
 
         </div>
 
            <div id="m_box3">
            <img src="./img/9.png" id="title_img3">
-	       <h4 id="title_text1_3">“ 이 병사들이 과연 살 수 있을 것 같나? ” </h4>
-	       <h4 id="title_text1_4">“ 도화선이 짧아서 불가능 할 것 같지만 제가 방법을 알고있습니다 사장님! ” </h4>
+         <h4 id="title_text1_3">“ 이 병사들이 과연 살 수 있을 것 같나? ” </h4>
+         <h4 id="title_text1_4">“ 도화선이 짧아서 불가능 할 것 같지만 제가 방법을 알고있습니다 사장님! ” </h4>
         </div>
 
 
-	       <div id="m_box4">
-	       <img src="./img/4.png" id="title_img1_1" >
-		   <h3 id="number_position2">#03</h3>
-		   <p class="quote" id="title_text1_5"> 사장과의 대면에서 무참히 패배하고 회사에서 지금 당장 나가라는<br>
+         <div id="m_box4">
+         <img src="./img/4.png" id="title_img1_1" >
+       <h3 id="number_position2">#03</h3>
+       <p class="quote" id="title_text1_5"> 사장과의 대면에서 무참히 패배하고 회사에서 지금 당장 나가라는<br>
               통보를 받은 데릭. 어쩔 수 없이 자신의 물건을 정리해 회사밖으로<br>
               나가려는 도중 뜬금없이 경찰들에게 저지당한 그는 사무소 건물이<br>
               통째로 정부기관에 의해 통제격리 되었다는 사실을 알아차린다.<br>
@@ -185,23 +68,23 @@
               못하는 상황. 혼란한 분위기 속에 데릭은 예전에 자신이 처리한 사건 하나를<br>
               기억해 낸다. 바로 사람을 살해한 남자를 바이러스에 감염되었었기 때문이라고<br>
               어필해서 무죄로 만들어낸 사건이다.
-			</p>
+      </p>
         </div>
 
-	
-		<div id="m_box5">
-			<img src="./img/g3.png" id="title_img4" >
-			<p  id="title_text1_55"> 전염성이 빠른 바이러스에 어느새 자신도 감염 되어있었고, 평소라면 절대 하지않았을 생각이건만<br>
+  
+    <div id="m_box5">
+      <img src="./img/g3.png" id="title_img4" >
+      <p  id="title_text1_55"> 전염성이 빠른 바이러스에 어느새 자신도 감염 되어있었고, 평소라면 절대 하지않았을 생각이건만<br>
              극도의 분노상태에있던 그는 이를 이용해서 사장에게 복수를 하기로 마음먹는다. 마침 법률자문을<br>
              얻으러 왔다가 중역들의 농간으로 인해 오히려 피해를 입었던 의뢰인 멜라니(사마라 위빙)와 함께<br>
              연합하게 되고, 한마음 한 뜻으로 고위 간부들이 있는 건 물 최상층을 향해 올라간다. 이미 판례를<br>
              제시하며 도발 영상을 촬영해 보낸 그들에게 중역들은 현상금까지 내걸며 침입을 막으려 하고 ..<br>
              무수한 방해공작속에 데릭은 합법범죄의 꿈을 이룰 수 있을까?
-			</p>
+      </p>
         </div>
 
  <div id="m_box555">
-	         <p id="title_text1_9">cast</p>
+           <p id="title_text1_9">cast</p>
 
  <div id="m_box55">
       <div class="box"> 
@@ -265,44 +148,44 @@
    </div>
 
 
-	    <div id="m_box7">
-		<div id="m_box77">
-			<img src="./img/weaving.png" id="mel" >
-			<br>
-			<h4 id="title_text1_8">MELLANI</h4><br>
+      <div id="m_box7">
+    <div id="m_box77">
+      <img src="./img/weaving.png" id="mel" >
+      <br>
+      <h4 id="title_text1_8">MELLANI</h4><br>
             <p id="title_text1_10">" 아무도 빗방울이 홍수를 일으킨다고 생각하지 않죠 "</p>
-			<p id="title_text1_7">대기업에 버려지던 피고용자가 높은 분들에게 복수하기로 다짐하며.</p>
+      <p id="title_text1_7">대기업에 버려지던 피고용자가 높은 분들에게 복수하기로 다짐하며.</p>
 
     </div>
        </div>
              <div id="m_box8">
              <p> 스트레스 제대로 풀리는 영화! 바이러스 설정이 B급이긴<br>
-			 하지만 정신나간 연출과 함께 편집 호흡도 전개도 빨라서<br>
-			 오락영화로 제격이다. 신나게 때려부수고 찌르고, 이 영화<br>
+       하지만 정신나간 연출과 함께 편집 호흡도 전개도 빨라서<br>
+       오락영화로 제격이다. 신나게 때려부수고 찌르고, 이 영화<br>
              만든 감독과 각본가는 직장생활에서 쌓인 한이 많았을거다.<br><br>
  
              고급스러운 영화나 아주 뜻깊고 교훈적인 영화를 찾고있다<br>
              거나 오류나 트집잡을 구석이보이면 흥미가 식는 사람들<br>
              에게 추천 할 만한 영화는 아니다. 하지만 스피드감 있는<br>
              코미디 액션을 찾는 사람이라면 충분히 즐길만한 작품.      
-			 </p>
-			</div>
+       </p>
+      </div>
 
     <div id="m_box9">
-			<p> 굳이 비슷한 분위기를 찾아보자면 킹스맨의 가볍고 유쾌한<br>
-			느낌을 떠올리면 좋겠다. 주인공의 인성이 너무도 잔인하게<br>
-			느껴져 부담스럽다면 바이러스 때문이라고 생각하면 되니<br>
-			맘편히 감상할 수 있다.<br><br>
+      <p> 굳이 비슷한 분위기를 찾아보자면 킹스맨의 가볍고 유쾌한<br>
+      느낌을 떠올리면 좋겠다. 주인공의 인성이 너무도 잔인하게<br>
+      느껴져 부담스럽다면 바이러스 때문이라고 생각하면 되니<br>
+      맘편히 감상할 수 있다.<br><br>
 
             요즘 직장상사(死)라는 말이 있다. 그만큼 사람들이 일터<br>
             에서 받는 스트레스가 많다는 의미다. 상사의 얼굴만 봐도<br>
             열이 뻗치고 사직서 한 장을 가슴에 품고있다면..  대리<br>
             만족의 즐거움을 느낄 수 있는 메이헴을 선택하는건 어떨까?
-			</p>
+      </p>
 </section>
-	</div>
+  </div>
 <footer>
-	<div id="foot_box"> 
+  <div id="foot_box"> 
    <div class="footbox"> 
       <div class="imagebox2">
          <img src="./img/logo.png">
@@ -333,7 +216,7 @@
    </div>
    </div>
    <div class="clear"></div>
-	</div>
+  </div>
 </footer>
 </body>
 </html>
