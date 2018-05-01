@@ -1,0 +1,121 @@
+
+*{padding: 0; font-family: 'Nanum Myeongjo', serif; font-weight: 400; margin: auto;}
+		div{width: 100%; padding: 1em; position: relative;}
+		img{width: 1640px; margin: auto;}
+		body{text-align:center; background:#0e716b;}
+
+		.wrap{width: 1800px; margin:auto; position: relative}
+		.greeen{background: #0e716b;}
+        .quote {border-left: 0.2em solid white;padding: 2.2em;}
+        
+        
+
+        .box{text-align:left;width:400px; height:900px; background:#0e716b; float:left; margin:1em; margin-top:100px;}   
+        .imagebox {text-align:none; height: 480px; overflow hidden; }
+        .imagebox img{text-align:left; width: 88%; margin-right:1em; margin-left:1em; } 
+        .clear{clear:both;}
+
+        
+
+        .footbox{width:300px; height:200px; left:155px; float:left; margin-top:8em; text-align: left;}
+        .imagebox2 {height: 300px; overflow hidden;  margin:0px; right:25px;}
+        .imagebox2 img{width: 70%; margin:0px;}
+    
+
+
+	    h1,h2,h3,h4,h5,h6,p, {font-family: "source-han-serif-korean",serif; font-weight:600;}
+		h1{text-align: left; font-size:15em; position: absolute; line-height: 1.58; left: 450px; top: 180px; font-weight: bold;}
+		h2{text-align: left; font-size:1.7em; position: absolute; line-height: 1.58;} 
+        h3{text-align: left; font-size:15em; position: absolute; line-height: 1.58; opacity: 0.8; font-weight: 600;} 
+		h4{text-align: left; font-size:2.5em; position: absolute; line-height: 1.58; }
+
+		h5{font-size: 1.25em; height:80px; line-height: 1.58;  margin:0; padding-right: 0.5em; ;font-weight: bold; color:white;}
+		h6{font-size: 1.25em; height:300px; line-height:1.58; background-color:#c6bc8d; overflow: hidden; color:black; padding-left: 1.7em; padding-right: 1.3em; padding-top:2em; padding-bottom:2em;margin-top:1em; margin-bottom:3em;}
+
+		p{text-align: left; font-size:1.25em; position: absolute;  color: white;  font-weight: 600; line-height:1.75em;}
+
+
+#t_box{width: 1800px; height: 1700px; margin: auto;}
+#t_tbox1{width: 1800px; height:30px;top: 140px; margin: auto; color: white;}
+#chart1{position:absolute; top: 550px; left: 370px; writing-mode:tb-rl;
+ -webkit-transform:rotate(90deg);
+ -moz-transform:rotate(90deg);
+ -o-transform: rotate(90deg);
+ white-space:nowrap;
+ display:block;
+ bottom:0;}
+
+#chart2{position:absolute; top: 1000px; left: 500px;
+		writing-mode:tb-rl;
+ -webkit-transform:rotate(90deg);
+ -moz-transform:rotate(90deg);
+ -o-transform: rotate(90deg);
+ white-space:nowrap;
+ display:block;
+ bottom:0;}
+
+
+		#chart3{position:absolute; top: 10px; right: 150px; opacity: 0.4;}
+		#number_position{position: absolute; left: 1200px; top: 450px;}
+		#number_position2{position: absolute; left: 250px; top: 0px;}
+
+		#m_box1{width: 1800px; top: 20px; height: 1220px; margin: auto; color: white;}
+		#m_box2{width: 1800px; top:0px; height: 600px; margin:auto; color: white;}
+		#m_box3{height: 1350px; margin:auto; color: white;}
+		#m_box4{width: 1800px; height: 950px; margin:auto; color: white;}
+		#m_box5{width: 1800px; height: 1650px; margin:auto; color: white;}
+		  #m_box55{width: 1500px; left:50px; height:850px; color: white;}
+		#m_box6{width: 1000px; height: 1350px; margin:auto; color: white;}
+		#m_box7{width: 1800px; height: 700px; margin:auto; color: white; top:10px;}
+		#m_box77{position: absolute;width: 1720px; height: 440px; margin:auto; left:10px;}
+		#m_box8{position: absolute;width: 600px; height: 590px; color: white; right: 850px; top:2910px;}
+		#m_box9{position: absolute;width: 600px; height: 570px; color: white; left: 940px; top:2910px;}	
+	
+
+
+		#title_img1 {width: 1500px;}
+		#title_img1_1 {position: absolute;width: 1500px; top:235px; left:200px;}
+		#title_img2 {position: absolute; width: 750px; left:160px;}
+		#title_img3 {position: absolute; width: 1000px; left: 400px; top: 40px;}
+		#title_img4 {width: 83%; top: 40px;}
+		#title_img45 {width: 100%; top: 40px;}
+		#title_img5 {position: absolute; width: 1420px; right: 200px; bottom: 500px;}
+		 #mel{position: absolute; width: 100px; height: 110px; left: 820px; top:290px;}
+		#title_img6 {position: absolute; width: 1900px;}
+
+		#title_text1_1{position: absolute; bottom: 280px; left: 290px; font-weight: 600; line-height:1.75em;}
+		#title_text1_2{position: absolute; bottom: 180px; left: 1000px; font-weight: 600; line-height:1.75em;}
+		#title_text1_22{position: absolute;left: 660px; font-weight: 600; line-height:1.75em; bottom:0px; font-weight:700; font-size: 6em;}
+	    #title_text1_3{position: absolute; left: 560px; font-weight: 700;}
+		#title_text1_4{position: absolute; bottom: 70px; left: 250px; font-weight: 700;}
+        #title_text1_5{position: absolute;  top: 320px; left: 330px; font-weight: 600; line-height:1.75em;}
+        #title_text1_55{position: absolute; top: 680px; left: 485px; font-weight: 600; line-height:1.75em;}
+		#title_text1_6{position: absolute;  bottom: 220px; left: 710px; font-weight: 400;}
+		#title_text1_7{position: absolute; left: 715px;  bottom: 20px;  font-weight: 400; color:white; opacity: 0.6}
+		#title_text1_7{position: absolute; left:575px; top:575px;}
+		#title_text1_8{position: absolute; bottom: 5px; left:775px; text-align: center;}
+        #title_text1_9{position: absolute; left: 205px; top:1px;text-align: left; font-size:3.5em; line-height: 1.58; writing-mode: tb-rl; color: white;}
+        #title_text1_10 {text-align: left; font-size:3.5em; position: absolute; line-height: 1.58; color: black; font-weight: bold; top:480px; left:270px;}
+
+
+ #title_text1_11 {text-align: left; font-size:1.2em; white-space: 15em; color: white;}
+ #title_text1_12 {text-align: left; font-size:1.3em; white-space: 15em; color: white; font-weight: bold;height:40px; margin:0; padding-right: 0.5em; font-weight: 800;}
+
+		#cp{position: absolute; font-weight: 600; width: 280px; height: 375px; left: 40px; top:100px;}
+		 #cp_{position: absolute; font-weight: 600; width: 280px; height: 375px; top: 430px;}
+		#cp1{position: absolute; font-weight: 600; top: 150px; left: 370px; width: 280px; height: 375px;}
+		 #cp_1{position: absolute; font-weight: 600; top: 480px; left: 350px; width: 300px; height: 375px;}
+		#cp2{position: absolute; font-weight: 600; left: 700px; width: 280px; height: 375px; top:100px;}
+		 #cp_2{position: absolute; font-weight: 600; left: 680px; width: 300px; height: 375px;top: 430px;}
+		#cp3{position: absolute; font-weight: 600; top: 550px; width: 280px; height: 375px;left: 40px;}
+		 #cp_3{position: absolute; font-weight: 600; top: 880px; width: 300px; height: 375px;}
+		#cp4{position: absolute; font-weight: 600; left: 370px; top: 600px; width: 280px; height: 375px;}
+		 #cp_4{position: absolute; font-weight: 600; left: 350px; top: 930px; width: 280px; height: 375px;}
+		#cp5{position: absolute; font-weight: 600;left: 700px; top: 550px;  width: 280px; height: 375px;}
+	     #cp_5{position: absolute; font-weight: 600;left: 680px; top: 880px;  width: 280px; height: 375px;}
+
+	     #foot_box{width: 1570px; right:15px; top:570px; height: 420px; background:black;}
+
+		#image_arrange{width: 1840px; margin: auto;}
+	
+	
