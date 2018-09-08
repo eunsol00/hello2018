@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>환율계산기</title>
+</head>
+
+<body>
+	<div style="position:relative; top:50px; left: 20px;">
+	<input type="text" placeholder="KRW" size="30" id="myWon">원
+	<button id="but">변환하기</button>
+	<br>
+	<br>
+	<br>
+	<div id="output" style="width:600px; height:300px; background:green; color:white;
+	text-align:center; line-height: 290px; font-size:1.5em;"> 대한민국 원을 미국 달러로 변환해보자! </div>
+
+</div>
+	<script type="text/javascript">
+
+		but.onclick = function(){
+
+			var myResult = myWon.value * 1.114;
+			var finalOutput = "9월 8일자 환율기준 " + myResult + "달러 입니다.";
+
+			output.innerHTML = finalOutput;
+		}
+
+	</script>
+</body>
+</html>
