@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>event test page2</title>
+<style>
+
+
+body{background: #d3ff30; text-align:center;}
+
+#taeilposition{position:absolute;  width:800px; left:250px;top:150px;}
+
+#character1{width:100px; position:absolute; left:185px; top:10px; }
+#character55{width:100px; position:absolute; left:805px; top:630px; }
+
+
+#character11{width:100px; position:absolute; left:170px; top:50px;}
+#character5{width:100px; position:absolute; left:170px; top:0px; }
+
+
+#character22{width:100px; position:absolute; left:615px; top:50px; }
+#character6{width:100px; position:absolute; left:180px; top:0px; }
+
+
+#character2{width:100px; position:absolute; left:180px; top:10px; }
+#character44{width:100px; position:absolute; left:405px; top:630px; }
+
+
+#character3{width:100px; position:absolute; left:175px; top:10px; }
+#character33{width:100px; position:absolute; left:30px; top:630px; }
+
+
+#character4{width:400px; position:absolute; left:1150px; top:450px; }
+
+#videobox{left:10px; width: 0px; transition: all 2s}
+        video{width: 0px; transition: all 1s}
+
+   .tooltip {
+    position: relative;
+    display: inline-block;
+ 
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+</style>
+
+</head>
+<body>
+    <div id="videobox">
+<video id="videobox2" src="digimon.mp4" type="video/mp4">
+</video>
+</div>
+
+<body style="text-align:center;">
+
+    
+  <div class="tooltip" id="character11">
+  <span class="tooltiptext">태일아!</span>
+<img src="digimon1.gif" id="character5">
+</div>
+
+ <div class="tooltip" id="character22">
+  <span class="tooltiptext">너는!</span>
+<img src="digimon6.gif" id="character6">
+</div>
+
+
+ <div class="tooltip" id="character33">
+  <span class="tooltiptext">좋겠다!</span>
+<img src="digimon3.gif" id="character3">
+</div>
+
+
+ <div class="tooltip" id="character44">
+  <span class="tooltiptext">과제 없는!</span>
+<img src="digimon2.gif" id="character2">
+</div>
+
+
+ <div class="tooltip" id="character55">
+  <span class="tooltiptext">중학생이라서!</span>
+<img src="digimon5.gif" id="character1">
+</div>
+
+
+<img src="taeil.png" id="taeilposition">
+
+<img src="digvice1.png" id="character4">
+
+<audio id="testMusic">
+    <source src="scream.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<script type="text/javascript">
+
+
+        var toggle = "off";
+
+    character4.onclick = function(){
+        if(toggle =="off"){
+            character4.setAttribute("src","digvice2.png");
+
+        toggle = "on"
+        videobox.style.width = "1200px";
+            videobox2.style.width = "1200px";
+
+            videobox2.setAttribute("src","digimon.mp4");
+            videobox2.play();
+           taeilposition.style.opacity = 0
+           character1.style.opacity = 0
+           character2.style.opacity = 0
+           character3.style.opacity = 0
+           character5.style.opacity = 0
+           character6.style.opacity = 0
+
+    }
+    else if(toggle = "on"){
+        character4.setAttribute("src","digvice1.png");
+      toggle = "off"
+      videobox.style.width = "0px";
+           videobox2.style.width = "0px";
+           videobox2.setAttribute("src","digimon.mp4");
+           videobox2.pause();
+           taeilposition.style.opacity = 1
+           character1.style.opacity = 1
+           character2.style.opacity = 1
+           character3.style.opacity = 1
+           character5.style.opacity = 1
+           character6.style.opacity = 1
+
+}
+        }
+var toggle = "off";
+
+    taeilposition.onclick = function(){
+        if(toggle =="off"){
+
+        taeilposition.setAttribute;
+        document.body.style.backgroundColor = "black";
+        toggle = "on";
+        testMusic.play();
+
+    }else {
+        taeilposition.setAttribute;
+         document.body.style.backgroundColor = "#d3ff30";
+        toggle = "off";
+        testMusic.pause();
+}
+        }
+
+
+
+
+
+</script>
+
+</body>
+</html>
