@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+	 <meta charset="utf-8">
+<title>Halloween</title>
+<style>
+body{background: black; text-align:center; color:orange;}
+
+#candy{width: 5px;  animation:drop 1s infinite; position:absolute;}
+
+#ghosts{position: absolute; left: 100px; top: 50px; width: 300px; animation-play-state: paused; }
+
+#cat{position: absolute; left: 950px; top: 280px; width: 450px; animation-play-state: paused;}
+
+#costumes{position: absolute; left: 340px; top: 200px; width: 200px; animation-play-state: paused;}
+
+#sticks{position: absolute; left: 450px; top: 10px; width: 220px; animation-play-state: paused;}
+
+#vampires{position: absolute; width:300px; left: 300px; top: 570px;}
+
+#jack{position: absolute; left: 10px; top: 360px; width: 220px; animation-play-state: paused;}
+
+#bat{position: absolute; left: 650px; top: 180px; width: 400px; animation-play-state: paused;}
+
+#videobox{transition: all 1s;  width:0px; position:absolute; left:450px; top:180px; z-index:11;
+}
+
+#myDiv{position: absolute; left:20%; top:500px;}
+#myDiv2{position: absolute; left:20%; top:440px;}
+
+#ghostt{width:30px; height:30px;  position:absolute; left:0px; top:100px;
+animation:ghostt 8s infinite; z-index:12;}
+
+@keyframes ghostt{
+		10%{position:absolute; left:70px; top:100px;}
+		30%{position:absolute; left:500px; top:500px;}
+		50%{position:absolute; left:1200px; top:400px;}
+		70%{position:absolute; left:1000px; top:50px;}
+		90%{position:absolute; left:0px; top:200px;}
+	}
+
+
+@keyframes drop{
+	from{margin-top: 0;}
+	to{margin-top:200px;}
+}
+
+.scene {
+  width: 180px;
+  height: 220px;
+  border: 0px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  left:200px;
+  top:70px;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: url('ghost.png');
+}
+
+.card__face--back {
+  background: url('ghost2.png');
+  transform: rotateY(180deg);
+}
+
+</style>
+</head>
+<body>
+
+	<div class="scene scene--card">
+  <div class="card">
+    <div class="card__face card__face--front"></div>
+    <div class="card__face card__face--back"></div>
+  </div>
+</div>
+
+
+	<script>
+function myFunction(event) {
+var x = document.createEvent("MouseEvent");
+x.initMouseEvent("mouseover", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+document.getElementById("myDiv").dispatchEvent(x);
+}
+</script>
+
+<div onmouseover="this.innerHTML += '중간고사!'" id="myDiv">A. </div>
+
+
+	<div id="candy">
+		<img src="sweet1.png" id="candy">
+	</div>
+	<div id="ghosts">
+
+<img src="bat.png" id="bat">
+<img src="cat.png" id="cat">
+<img src="costumes.png" id="costumes">
+<img src="sticks.png" id="sticks">
+<img src="jack.png" id="jack">
+<img src="vampires.png" id="vampires">
+
+<img id="ghostt" src="ghost.png">
+
+</div>
+
+<p id="myDiv2">Q. 할로윈의 꽃말은?</p>
+
+<video id="videobox" src="jack2.mp4" type="video/mp4">
+</video>
+
+<audio id="harry">
+    <source src="harry.mp3" type="audio/mpeg">
+</audio>
+
+
+<audio id="wolf">
+    <source src="wolf.mp3" type="audio/mpeg">
+</audio>
+
+
+<audio id="monster">
+    <source src="monster.mp3" type="audio/mpeg">
+</audio>
+
+
+
+	<script type="text/javascript">
+
+
+		var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
+
+		     var toggle = "off";
+
+		    sticks.onclick = function(){
+			if(toggle == "off"){
+				harry.play();
+				toggle = "on";
+				sticks.style.width = "240px";
+			}else {
+				harry.pause();
+				harry.load();
+				toggle = "off";
+				sticks.style.width = "220px";
+			}	
+	}	
+
+
+   cat.onclick = function(){
+			if(toggle == "off"){
+				wolf.play();
+				toggle = "on";
+				cat.style.width = "470px";
+			}else {
+				wolf.pause();
+				wolf.load();
+				toggle = "off";
+				cat.style.width = "450px";
+			}	
+	}	
+
+   costumes.onclick = function(){
+			if(toggle == "off"){
+				monster.play();
+				toggle = "on";
+				costumes.style.width = "220px";
+			}else {
+				monster.pause();
+				monster.load();
+				toggle = "off";
+				costumes.style.width = "200px";
+			}	
+	}	
+var toggle = "off";
+	 vampires.onclick = function(){
+			if(toggle == "off"){
+				   vampires.setAttribute;("src","vampires2.png");
+			  document.body.style.backgroundColor = "red";
+				toggle = "on";
+
+			}
+			else 
+			{
+				 vampires.setAttribute;("src","vampires.png");
+				  document.body.style.backgroundColor = "black";
+				toggle = "off";
+			
+			}	
+	}	
+
+
+    ghostt.onclick = function(){
+         if(toggle =="off"){
+         toggle = "on"
+         videobox.style.width = "780px";
+            videobox.play();
+            harry.pause();
+    
+          
+    }
+    else{ 
+			toggle = "off";
+			
+			videobox.pause();
+			videobox.style.width = "0px";
+			}
+			}	
+
+
+
+
+	for(var i=1; i<20; i++){
+		var t = document.getElementById("candy");
+	var k = t.cloneNode(true);
+    k.style.left = Math.random()*window.innerWidth +"px";
+    k.style.top = Math.random()*window.innerHeight +"px";
+   var time = Math.random();
+   k.style.animationDuration = time+"s";
+      
+    document.body.appendChild(k);
+}
+    console.log(window.innerWidth, window.innerHeight);
+
+var total = 0;
+for(var i=0; i<10; i++){
+	total = total + (i + 1);
+console.log(total);
+}
+
+	</script>
+</body>
+</html>
