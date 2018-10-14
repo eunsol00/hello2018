@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>명대사</title>
+  <style>
+  @font-face { font-family: 'Atomy-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Atomy-Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+  @font-face { font-family: 'NanumBarunpen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+    h1 { font-family: 'Atomy-bold'; }
+    p{ font-family: 'Atomy-bold';color:383839;} 
+    body {background:black;}
+
+  .arar{color:black; font-weight: bold; position:absolute;  animation:drop 2s forwards; opacity: 0; transition: 1s; font-size: 3em;font-family: 'Atomy-bold';}
+  .arar:hover{font-size: 4em;}
+
+
+#nameCon{width:250px; height:150px;color:#232323;font-size: 1.4em; position: absolute;top:170px; left:1165px; font-family: 'NanumBarunpen'}
+#nameCon2{width:250px; height:150px;color:#a8a8a8;font-size: 1.4em; position: absolute;top:400px; left:1215px;font-family: 'NanumBarunpen'}
+#nameCon3{width:250px; height:150px;color:#777777;font-size: 1.4em; position: absolute;top:180px; left:105px;font-family: 'NanumBarunpen'}
+#nameCon4{width:250px; height:150px;color:#424242;font-size: 1.4em; position: absolute;top:320px; left:185px;font-family: 'NanumBarunpen'}
+
+@keyframes drop{
+    from{margin-top:0; opacity:0;}
+    to{margin-top:50px; opacity:1;}
+  }
+
+
+#a0{left:770px; top:90px; width:5px; height:8px;background: white;color:#d0c183;}
+#a1{left:820px; top:145px; width:5px; height:8px; background: white;color:#997a31;}
+#a2{left:870px; top:195px; width:5px; height:8px; background: white;color:#997a31;}
+#a3{left:920px; top:245px; width:5px; height:8px; background: white;color:#997a31;}
+
+#ar{left:475px; width:130px; top:30px; height:650px;position: absolute;}
+#ar img{width:90%;}
+#arc{left:640px; top:100px; width:450px; height:450px; position: absolute; background:#2a2d3b; color:black;padding-left: 20px;}
+#arc2{left:630px; top:100px; width:10px; height:550px; position: absolute; background:#f4f1eb;text-align: center;}
+
+#arc3{left:640px; color:383839;top:550px; width:470px; height:100px; position: absolute; background:#f4f1eb; text-align: center;}
+
+.type1{left:180px; bottom:10px;color:383839;position: absolute; text-align: center;}
+.type2{left:28px;bottom:10px; position: absolute; color:white; text-align: center;}
+.arimg{width:78%; position: absolute; top:70px; left:40px;}
+
+.arimg2{width:78%; position: absolute; top:100px; transform:translate(-15%,-10%);
+              animation:arimg2 .4s ease infinite alternate;}
+              @keyframes arimg2 {
+                0% {transform:translate(0%,0%);}
+                100% {transform:translate(-10%,0%);}
+              }
+ 
+
+
+
+
+}
+</style>
+</head>
+<body>
+  
+<div id= "ar">
+   <img src="arc2.png" class="arimg2">
+  <img src="arc.png" class="arimg">
+ 
+</div>
+
+<div id="arc">
+<h1 class="type2">인생을 살 맛나게 해주는건<br>꿈이 실현되리라고 믿는 것이지!</h1>
+</div>
+
+<div id="arc3">
+  <p class="type1">The Alchemist</p>
+</div>
+
+<div id="arc2">
+</div>
+
+<div id="arcc">
+</div>
+<div id="nameCon"></div>
+<div id="nameCon2"></div>
+<div id="nameCon3"></div>
+<div id="nameCon4"></div>
+<div id="arcCon">
+
+</div>
+
+
+  <script type="text/javascript">
+    
+var text = "연 금 술 사";
+
+
+
+  var k = text.split(" ");
+
+for(var i=0; i<k.length; i++){
+  var c = document.getElementById("arcc");
+  var d = c.cloneNode(true);
+  d.className = "arar";
+  d.class = "arar"+i;
+  d.id = "a"+i;
+  d.innerHTML = k[i];
+ 
+  d.style.animationDelay = i*0.2 +"s";
+  d.onclick = function(){
+    console.log(this.id);
+    var t = document.getElementById(this.id);
+    nameCon3.innerHTML = "난 내 꿈을 실현하고 나면 살아갈 이유가 없어질까 두려워";
+    nameCon4.innerHTML = "자네는 양이나 피라미드에 대한 꿈을 가지고 있고 그걸 실현하길 원하지.";
+    nameCon.innerHTML = "그런 점에서 자넨 나와 달라….";
+    nameCon2.innerHTML ="모든 사람이 같은 방식으로 꿈을 보는 것은 아니었다.";
+
+} 
+  arcCon.appendChild(d);
+}
+
+
+
+
+  </script>
+</body>
+</html>
