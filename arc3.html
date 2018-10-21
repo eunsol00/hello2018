@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>명대사</title>
+  <style>
+  @font-face { font-family: 'Atomy-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Atomy-Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+  @font-face { font-family: 'NanumBarunpen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+    h1 { font-family: 'Atomy-bold'; }
+    p{ font-family: 'Atomy-bold';color:383839;} 
+    body {background:black;overflow: hidden;}
+
+
+  .view {
+  position: absolute;
+  top: 30px;
+  left: 1000px;
+  right: 0;
+  bottom: 0;
+  -webkit-perspective: 400;
+          perspective: 400;}
+
+.plane {
+  width: 250px;
+  height: 250px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;}
+.plane.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotateX(60deg) rotateZ(-30deg);
+          transform: rotateX(60deg) rotateZ(-30deg);
+  -webkit-animation: rotate 20s infinite linear;
+          animation: rotate 20s infinite linear;
+}
+.plane.main .circle {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px blue, inset 0 0 60px orange;
+}
+.plane.main .circle::before, .plane.main .circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  background: orange;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px 2px orange;
+}
+.plane.main .circle::before {
+  -webkit-transform: translateZ(-90px);
+          transform: translateZ(-90px);
+}
+.plane.main .circle::after {
+  -webkit-transform: translateZ(90px);
+          transform: translateZ(90px);
+}
+.plane.main .circle:nth-child(1) {
+  -webkit-transform: rotateZ(72deg) rotateX(63.435deg);
+          transform: rotateZ(72deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(2) {
+  -webkit-transform: rotateZ(144deg) rotateX(63.435deg);
+          transform: rotateZ(144deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(3) {
+  -webkit-transform: rotateZ(216deg) rotateX(63.435deg);
+          transform: rotateZ(216deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(4) {
+  -webkit-transform: rotateZ(288deg) rotateX(63.435deg);
+          transform: rotateZ(288deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(5) {
+  -webkit-transform: rotateZ(360deg) rotateX(63.435deg);
+          transform: rotateZ(360deg) rotateX(63.435deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+            transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+            transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+
+      .scroll{position: absolute; width: 700px; height: 700px; font-family: "Atomy-bold"; font-size: 5.5em; color:white; top:5px;}
+
+      .scroll2{position: absolute; width: 700px; height: 500px; font-family: "Atomy-bold"; font-size: 3.5em; color:white;}
+
+
+  .arar{color:black; font-weight: bold; position:absolute;  animation:drop 2s forwards; opacity: 0; transition: 1s; font-size: 3em;font-family: 'Atomy-bold';}
+  .arar:hover{font-size: 4em;}
+
+#moonbac {width: 100%; height: 100%; position: absolute; background: url(moon.gif);}
+#mooon {width: 220px; height: 250px; top: 200px; position:relative; left: 600px;
+        animation : mooon 0.5s;
+        animation-play-state: paused;}
+    @keyframes mooon {
+      from{opacity: 0}
+      to {opacity: 1}
+    }
+
+
+#nameCon{width:250px; height:150px;color:gray;font-size: 1.4em; position: absolute;top:170px; left:1165px; font-family: 'NanumBarunpen'}
+#nameCon2{width:250px; height:150px;color:gray;font-size: 1.4em; position: absolute;top:320px; left:1215px;font-family: 'NanumBarunpen'}
+#nameCon3{width:250px; height:150px;color:gray;font-size: 1.4em; position: absolute;top:180px; left:105px;font-family: 'NanumBarunpen'}
+#nameCon4{width:250px; height:150px;color:gray;font-size: 1.4em; position: absolute;top:320px; left:185px;font-family: 'NanumBarunpen'}
+
+@keyframes drop{
+    from{margin-top:0; opacity:0;}
+    to{margin-top:50px; opacity:1;}
+  }
+
+
+#a0{left:770px; top:90px; width:5px; height:8px;background: white;color:#d0c183;}
+#a1{left:820px; top:145px; width:5px; height:8px; background: white;color:#997a31;}
+#a2{left:870px; top:195px; width:5px; height:8px; background: white;color:#997a31;}
+#a3{left:920px; top:245px; width:5px; height:8px; background: white;color:#997a31;}
+
+#ar{left:475px; width:130px; top:30px; height:650px;position: absolute;}
+#ar img{width:90%;}
+#arc{left:640px; top:100px; width:450px; height:450px; position: absolute; background:black; color:black;padding-left: 20px;}
+#arc2{left:630px; top:100px; width:10px; height:550px; position: absolute; background:black;text-align: center;}
+
+#arc3{left:640px; color:383839;top:550px; width:470px; height:100px; position: absolute; background:black; text-align: center;}
+
+.type1{left:180px; bottom:10px;color:383839;position: absolute; text-align: center;}
+.type2{left:28px;bottom:10px; position: absolute; color:white; text-align: center;}
+.arimg{width:78%; position: absolute; top:70px; left:40px;}
+
+.arimg2{width:78%; position: absolute; top:100px; transform:translate(-15%,-10%);
+              animation:arimg2 .4s ease infinite alternate;}
+              @keyframes arimg2 {
+                0% {transform:translate(0%,0%);}
+                100% {transform:translate(-10%,0%);}
+              }
+}
+
+
+.byline span {
+  animation: spin-letters 10s linear infinite;
+}
+.byline {
+  animation: move-byline 10s linear infinite;
+}
+
+@keyframes move-byline {
+  0% {
+    transform: translateZ(5em);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+.starwars-demo {
+    perspective: 800px;
+  transform-style: preserve3d;
+  height: 17em;
+  left: 50%;
+  position: absolute;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  width: 34em;
+}
+
+.byline span {
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+}
+
+.byline {
+  position: absolute;
+  color: crimson;
+  font-family: "ITC Serif Gothic", Lato;
+  font-size: 2.25em;
+  left: -2em;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-transform: uppercase;
+  top: 160px;
+  right:-2em;
+  left:140px;
+}
+
+@media only screen and (max-width: 600px) {
+  .starwars-demo {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .starwars-demo {
+    font-size: 7px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+  <div id="moonbac"></div>
+  <img src="moon.gif" id="mooon">
+<div id= "ar">
+   <img src="arc2.png" class="arimg2">
+  <img src="arc.png" class="arimg">
+ 
+</div>
+
+<div id="arc">
+<h1 class="type2">인생을 살 맛나게 해주는건<br>꿈이 실현되리라고 믿는 것이지!</h1>
+</div>
+
+<div id="arc3">
+ 
+</div>
+
+<div id="arc2">
+</div>
+
+<div id="arcc">
+</div>
+<div id="nameCon"></div>
+<div id="nameCon2"></div>
+<div id="nameCon3"></div>
+<div id="nameCon4"></div>
+<div id="arcCon">
+</div>
+
+
+<div class="starwars-demo">
+<h2 class="byline" id="byline">The Archemist</h2>
+</div>
+
+<div class="scroll">
+    <p style="transform: rotate(-45deg); width: 1250px;">
+    <marquee bavior="scroll" diretion="right" scrollamount="20" >
+     자네가 &emsp;무언가를 &emsp;간절히 &emsp;원할 &emsp;때 &emsp;온 &emsp;우주는 &emsp;자네의 &emsp;소망이 &emsp;실현되도록 &emsp;도와준다네</marquee></p>
+      <div class="scroll2">
+    <p style="transform: rotate(-45deg); width: 1050px;">
+    <marquee bavior="scroll2" diretion="right" scrollamount="20" >
+    실수를 &emsp;감당할 &emsp;용기도 &emsp;필요해</marquee></p>
+  </div>
+
+<div class="view">
+  <div class="plane main">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</div>
+
+
+
+  <script type="text/javascript">
+
+    
+var text = "연 금 술 사";
+
+
+  var newText = text.split(" ");
+
+for(var i=0; i<newText.length; i++){
+  var a = document.getElementById("arcc");
+  var b = a.cloneNode(true);
+  b.className = "arar";
+  b.innerHTML = newText[i];
+  b.id = "a"+i;
+  b.onclick=function(){
+        var d = document.getElementById(this.id);
+        console.log(d.innerHTML);
+        nameCon.innerHTML = d.innerHTML;
+      }
+      document.body.appendChild(b);}
+
+
+
+ console.log(newText);
+
+    var currentname2 = 1;
+
+    arc.onclick = function(){
+      if(currentname2 == 1){
+        document.getElementById("nameCon").innerHTML = "난 내 꿈을 실현하고 나면 살아갈 이유가 없어질까 두려워";
+        currentname2 = 2;
+      }else if(currentname2 == 2){
+        document.getElementById("nameCon2").innerHTML =  "자네는 양이나 피라미드에 대한 꿈을 가지고 있고 그걸 실현하길 원하지.";
+        currentname2 = 3;
+      }else if(currentname2 == 3){
+        document.getElementById("nameCon3").innerHTML = "그런 점에서 자넨 나와 달라….";
+        currentname2 = 4;
+      }else if(currentname2 == 4){
+        document.getElementById("nameCon4").innerHTML =="모든 사람이 같은 방식으로 꿈을 보는 것은 아니었다.";
+        currentname2 = 5;
+      }
+  
+    }
+
+
+
+  </script>
+</body>
+</html>
