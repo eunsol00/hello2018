@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>명대사</title>
+  <style>
+  @font-face { font-family: 'Atomy-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Atomy-Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+  @font-face { font-family: 'NanumBarunpen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+
+
+    h1 { font-family: 'Atomy-bold'; }
+    p{ font-family: 'Atomy-bold';color:383839;} 
+    body {background:black;overflow: hidden; margin:0px; padding:0px;}
+    span {display: inline-block;}
+
+
+.scroll{position: absolute; width: 700px; height: 700px; font-family: "Atomy-bold"; font-size: 3.5em; color:white; top:5px;}
+.scroll2{position: absolute; width: 700px; height: 700px; font-family: "Atomy-bold"; font-size: 1.5em; color:white;top:15px;}
+.scroll3{position: absolute; width: 700px; height: 700px; font-family: "Atomy-bold"; font-size: 14.5em; color:white; top:16px;}
+
+
+
+
+#nameCon{width:250px; height:150px;color:gray;font-size: 1.4em; position: absolute;top:210px; left:1050px; font-family: 'NanumBarunpen'}
+#nameCon2{width:250px; height:150px;color:gray;font-size: 1.4em; position: absolute;top:320px; left:1195px;font-family: 'NanumBarunpen'}
+#nameCon3{width:250px; height:150px;color:gray;font-size: 1.4em; position: absolute;top:450px; left:165px;font-family: 'NanumBarunpen'}
+#nameCon4{width:250px; height:150px;color:gray;font-size: 1.4em; position: absolute;top:320px; left:185px;font-family: 'NanumBarunpen'}
+
+@keyframes drop{
+    from{margin-top:0; opacity:0;}
+    to{margin-top:50px; opacity:1;}
+  }
+
+
+#a0{left:770px; top:90px; width:5px; height:8px;background: white;color:#d0c183;}
+#a1{left:820px; top:145px; width:5px; height:8px; background: white;color:#997a31;}
+#a2{left:870px; top:195px; width:5px; height:8px; background: white;color:#997a31;}
+#a3{left:920px; top:245px; width:5px; height:8px; background: white;color:#997a31;}
+
+#ar{left:475px; width:130px; top:30px; height:650px;position: absolute;}
+#ar img{width:90%;}
+#arc{left:640px; top:100px; width:450px; height:450px; position: absolute; background:black; color:black;padding-left: 20px;}
+
+#arc3{left:640px; color:383839;top:550px; width:470px; height:100px; position: absolute; background:black; text-align: center;}
+
+.type1{left:180px; bottom:10px;color:383839;position: absolute; text-align: center;}
+.type2{left:28px;bottom:10px; position: absolute; color:white; text-align: center;}
+.arimg{width:78%; position: absolute; top:70px; left:40px;}
+
+.arimg2{width:78%; position: absolute; top:100px; transform:translate(-15%,-10%);
+              animation:arimg2 .4s ease infinite alternate;}
+              @keyframes arimg2 {
+                0% {transform:translate(0%,0%);}
+                100% {transform:translate(-10%,0%);}
+              }
+
+#backpic{width:550px; height:300px; top:530px;left:680px; position: absolute; }
+#backpic img{ opacity:0.5;}
+
+#ppr{width:100px; height:100px; position:absolute; left:1450px; top:400px;
+color:white; text-align:center; font-size: 4em; font-family: "Atomy-Bold"; }
+
+
+#ppr2{width:100px; height:100px; position:absolute; left:1450px; top:500px;
+color:gray; text-align:center; font-size: 4em; font-family: "Atomy-Bold"; }
+#ppr2:hover {color:#e9c35c;}
+
+#ppr3{width:100px; height:100px; position:absolute; left:1450px; top:600px;
+color:white; text-align:center; font-size: 4em; font-family: "Atomy-Bold"; }
+
+#ppr4{width:100px; height:100px; position:absolute; left:1450px; top:700px;
+color:white; text-align:center; font-size: 4em; font-family: "Atomy-Bold"; }
+
+#ppr5{width:30px; height:300px; position: absolute; top:485px; left:1590px; font-family: "Atomy-bold"; color:white; }
+#ppr6{width:30px; height:300px; position: absolute; top:495px; left:1600px; font-family: "Atomy-bold"; color:blue; }
+
+
+#elt{width:300px; height:100px; position:absolute; top:100px;color:yellow; position:absolute; z-index:6;  font-size:1.2em; font-family: "NanumBarunpen";}
+
+#elt2{width:300px; height:200px; left:500px; top : 650px; color:yellow; position:absolute; z-index:6;  font-size:1.2em;font-family: "NanumBarunpen";}
+
+
+
+
+.scene {
+  width: 500px;
+  height: 450px;
+  border: 0px solid #CCC;
+  margin: 40px 0;
+  perspective: 1500px;
+}
+
+.card {
+  left:850px;
+  top:400px;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: url('eyes.gif');
+}
+
+.card__face--back {
+  background: url('catch.gif');
+  transform: rotateY(180deg);
+}
+
+
+#sunposition{width:150px; position:absolute; left:1300px; top:500px;
+    animation-name: example;
+    animation-duration: 4s;    
+    animation-fill-mode: forwards;
+}
+
+
+  #suns{width: 100px; height: 100px; position: absolute; top: 90px; left: 1300px;font-size:0.7em; line-height: 2.5em; overflow: hidden; border-radius: 50%; text-align: center; transition-duration: 1s; border: 1px solid white;
+      animation-name: dropppp; 
+      animation-duration: 1s;
+      animation-iteration-count: infinite; }
+    #suns:hover{border-radius: 0%; width: 300px; height: 400px; color: black; font-size: 1.5em; background-color: red; border: 0px;}
+
+
+
+@keyframes example {
+    from {top: 700px;}
+    to {top: 200px; left:1400px; transform:rotateZ(0deg);}
+}
+
+</style>
+</head>
+<body>
+
+
+  <div id="sunposition">
+<img src="sun.gif">
+</div>
+
+
+  <div class="scene scene--card">
+  <div class="card">
+    <div class="card__face card__face--front"></div>
+    <div class="card__face card__face--back"></div>
+  </div>
+</div>
+
+<div id="suns"><p>“내일은 내일의 내가 뜬다?” </p></div>
+
+<div id = ppr onclick = "typeWriter()">鍊</div>
+<div id = ppr2 onclick = "typeWriter2()">金</div>
+<div id = ppr3>術</div>
+<div id = ppr4>師</div>
+<div id = ppr5>
+  <p>p<br>a<br>u̯<br>l<br>u<br><br> ˈ<br>k<br>o̯<br>e<br>ʎ<br>u<br></p>
+
+</div>
+<div id = ppr6>
+  <p>p<br>a<br>u̯<br>l<br>u<br><br> ˈ<br>k<br>o̯<br>e<br>ʎ<br>u<br></p>
+
+</div>
+
+
+<div id = elt></div>
+<div id = elt2></div>
+
+
+<div id="arc2">
+</div>
+
+<div id="arcc">
+</div>
+<div id="nameCon"></div>
+<div id="nameCon2"></div>
+<div id="nameCon3"></div>
+<div id="nameCon4"></div>
+<div id="arcCon">
+</div>
+
+
+<div class="scroll">
+    <p style="transform: rotate(-45deg); width: 1250px;">
+    <marquee bavior="scroll" diretion="right" scrollamount="20" >
+     자네가 &emsp;무언가를 &emsp;간절히&emsp; 원할&emsp; 때 &emsp;온&emsp; 우주는&emsp; 자네의 &emsp;소망이&emsp; 실현되도록&emsp; 도와준다네</marquee></p>
+   </div>
+     <div class="scroll3">
+    <p style="transform: rotate(-45deg); width: 1300px;">
+    <marquee bavior="scroll3" diretion="right" scrollamount="20" >
+    인생을 살 맛나게 해주는건 꿈이 실현되리라고 믿는 것이지</marquee></p>
+  </div>
+
+
+
+<div class="view">
+  <div class="plane main">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</div>
+
+
+<audio id="dct">
+    <source src="dct.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+  <script type="text/javascript">
+
+
+      var i = 0;
+  var txt = ' 산티아고는 ‘자아의 신화’가 무엇을 의미하는지 알 수 없었다. “그것은 자네가 항상 이루기를 소망해오던 바로 그것일세. 우리들 각자는 젊음의 초입에서 자신의 자아의 신화가 무엇인지 알게 되지. 그 시절에는 모든것이 분명하고 모든 것이 가능해 보여. 그래서 젊은이들은 그 모두를 꿈꾸고 소망하기를 주저하지 않는다네. 하지만 시간이 지남에 따라 알 수 없는 어떤 힘이 그 신화의 실현이 불가능함을 깨닫게 해.” “그것은 나쁘게 느껴지는 기운이지. 하지만 사실은 바로 그 기운이 자아의 신화를 실현할 수 있도록 도와준다네. 자네의 정신과 의지를 단련시켜주지. 이 세상에는 위대한 진실이 하나 있어. 무언가를 온 마음을 다해 원한다면, 반드시 그렇게 된다는 거야. 무언가를 바라는 마음은 곧 우주의 마음으로부터 비롯된 때문이지. 그리고 그것을 실현하는 게 이 땅에서 자네가 맡은 임무라네." ';
+  
+
+  var speed = 50;
+
+  function typeWriter(){
+    if(i<txt.length){
+      document.getElementById("elt").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  };
+ </script>
+  <script type="text/javascript">
+
+      var i = 0;
+  var txtt = ' 산티아고는 ‘자아의 신화’가 무엇을 의미하는지 알 수 없었다. “그것은 자네가 항상 이루기를 소망해오던 바로 그것일세. 우리들 각자는 젊음의 초입에서 자신의 자아의 신화가 무엇인지 알게 되지. 그 시절에는 모든것이 분명하고 모든 것이 가능해 보여. 그래서 젊은이들은 그 모두를 꿈꾸고 소망하기를 주저하지 않는다네. 하지만 시간이 지남에 따라 알 수 없는 어떤 힘이 그 신화의 실현이 불가능함을 깨닫게 해.” “그것은 나쁘게 느껴지는 기운이지. 하지만 사실은 바로 그 기운이 자아의 신화를 실현할 수 있도록 도와준다네. 자네의 정신과 의지를 단련시켜주지. 이 세상에는 위대한 진실이 하나 있어. 무언가를 온 마음을 다해 원한다면, 반드시 그렇게 된다는 거야. 무언가를 바라는 마음은 곧 우주의 마음으로부터 비롯된 때문이지. 그리고 그것을 실현하는 게 이 땅에서 자네가 맡은 임무라네." ';
+  
+
+  var speed = 50;
+
+  function typeWriter2(){
+    if(i<txtt.length){
+      document.getElementById("elt2").innerHTML += txtt.charAt(i);
+      i++;
+      setTimeout(typeWriter2, speed);
+    }
+  };
+ </script>
+  <script type="text/javascript">
+
+
+  var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
+
+
+var text = "";
+
+  var newText = text.split(" ");
+
+for(var i=0; i<newText.length; i++){
+  var a = document.getElementById("arcc");
+  var b = a.cloneNode(true);
+  b.className = "arar";
+  b.innerHTML = newText[i];
+  b.id = "a"+i;
+  b.onclick=function(){
+        var d = document.getElementById(this.id);
+        console.log(d.innerHTML);
+        nameCon.innerHTML = d.innerHTML;
+      }
+      document.body.appendChild(b);}
+
+
+
+ console.log(newText);
+
+    var currentname2 = 1;
+
+    ppr3.onclick = function(){
+      if(currentname2 == 1){
+        document.getElementById("nameCon").innerHTML = "1. 난 내 꿈을 실현하고 나면 살아갈 이유가 없어질까 두려워";
+        currentname2 = 2;
+      }else if(currentname2 == 2){
+        document.getElementById("nameCon2").innerHTML =  "2. 자네는 양이나 피라미드에 대한 꿈을 가지고 있고 그걸 실현하길 원하지.";
+        currentname2 = 3;
+      }else if(currentname2 == 3){
+        document.getElementById("nameCon3").innerHTML = "3. 그런 점에서 자넨 나와 아주 달라….";
+        currentname2 = 4;
+      }else if(currentname2 == 4){
+        document.getElementById("nameCon4").innerHTML =="모든 사람이 같은 방식으로 꿈을 보는 것은 아니었다.";
+        currentname2 = 5;
+      }
+  
+    }
+
+
+var toggle = "off";
+
+  ppr4.onclick = function(){
+      if(toggle == "off"){
+        toggle = "on";
+
+        dct.play();
+    
+      }else {
+          toggle = "off";
+        dct.pause();
+        
+  } 
+}
+
+var toggle = "off";
+
+    sunposition.onclick = function(){
+        if(toggle =="off"){
+
+        sunposition.setAttribute;("src","sun.gif");
+
+        toggle = "on";
+
+    }else {
+        sunposition.setAttribute;("src","sun2.gif");
+        toggle = "off";
+
+        }
+
+}
+
+
+
+
+  </script>
+</body>
+</html>
