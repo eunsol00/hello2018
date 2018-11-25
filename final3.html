@@ -1,0 +1,455 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>인생난이도</title>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<style>
+@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+
+
+body { background-color: orange; }
+td {text-align:center;}
+
+h4{text-align:center; font-family:'yg-jalnan';font-size:3em;}
+
+table td{}
+tbody tr td:first-child {text-align:left;padding:1.5em;left:70px;}
+td {font-family:'BMJUA'; font-size: 1.3em; color:brown; left:30px;}
+
+input[type='radio'] {visibility: hidden;}
+
+input[type='radio']:after {width:2em;height:1em;
+
+        border-radius: 0.75em;
+        background-color: #fff;
+
+        content: '';
+
+        display: inline-block;
+
+        visibility: visible;
+
+        border: 2px solid #8d8d8e;
+
+}
+
+input[type='radio']:checked:after {
+
+        background-color: blue;
+
+        content: '';
+
+        display: inline-block;
+
+        visibility: visible;
+
+        border: 2px solid #8d8d8e;
+     
+
+ }
+
+.table { width:1110px; height:700px; ; background: white; left:150px; padding:1em;}
+
+#actres{top:500px;}
+.itemsize{margin-left:27px;width:100px; height:100px;}
+.itemsize2{width:50px;}
+#s1{position: absolute; top:95px; left:1080px;}
+
+.popover431198{position:absolute; right:800px;}
+
+
+
+</style>
+
+
+
+
+<div id = "table">
+    </div>
+
+<div class="container">
+
+	<div class="row">
+
+        <div class="col-md-12">
+<br>
+<br>
+        <h4> 인생난이도 </h4>
+<br>
+<br>
+        <div class="table-responsive">                 
+
+        	<form id="research" class="form-horizontal" >
+
+				<table class="table">
+<div id="s1">
+					<a href="#" data-toggle="popover" title="." data-content="간략한 설명 띄울예정"><img src = "sweet1.png" class ="itemsize2"></a>
+                    <script>
+$(document).ready(function(){$('[data-toggle="popover"]').popover();});
+</script>
+</div>
+
+					<tbody>
+
+						<tr>
+
+                            <td><a href="#" data-toggle="popover" title=".." data-content="dsd">의상<br></a></td>
+                            
+
+<script>
+$(document).ready(function(){$('[data-toggle="popover"]').popover();});
+</script>
+
+
+
+                            <td><br><a href="#" data-toggle="popover" title="명품" data-content="100만원 이상"><img src = "tshirt.png" class ="itemsize"></a><br><br><input class="item" type="radio" name="s1" value="3"/><br></td>
+
+                                                        <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+                            <td><br><a href="#" data-toggle="popover" title="고가 브랜드" data-content="50만원 이상"><img src = "tshirt2.png" class ="itemsize"></a><br><br><input class="item" type="radio" name="s1" value="6"/></td>
+
+                            <td><br><a href="#" data-toggle="popover" title="보세" data-content="중저가"><img src = "tshirt3.png" class ="itemsize"></a><br><br><input class="item" type="radio" name="s1" value="9"/></td>
+
+                            <td><br><a href="#" data-toggle="popover" title="가게가 망했어요!" data-content="폭탄 세일가"><img src = "tshirt4.png" class ="itemsize"></a><br><br><input class="item" type="radio" name="s1" value="12"/></td>
+
+                            <td><br><a href="#" data-toggle="popover" title="물려 받기" data-content="환경을 생각해서."><img src = "tshirt5.png" class ="itemsize"></a><br><br><input class="item" type="radio" name="s1" value="15"/><br></td>        
+                        </tr>
+
+                        <tr>
+
+                            <td>식사</td>
+
+                            <td><br><img src = "e (1).png" class ="itemsize"><br><br><input class="item" type="radio" name="s2" value="2"/></td>
+
+                            <td><br><img src = "e (2).png" class ="itemsize"><br><br><input class="item" type="radio" name="s2" value="4"/></td>
+
+                            <td><br><img src = "e (3).png" class ="itemsize"><br><br><input class="item" type="radio" name="s2" value="6"/></td>
+
+                            <td><br><img src = "e (4).png" class ="itemsize"><br><br><input class="item" type="radio" name="s2" value="8"/></td>
+
+                            <td><br><img src = "e (5).png" class ="itemsize"><br><br><input class="item" type="radio" name="s2" value="10"/></td>          
+
+                        </tr>
+
+                        <tr>
+
+                            <td>집</td>
+
+                            <td><br><img src = "house (1).png" class ="itemsize"><br><br><input class="item" type="radio" name="s3" value="2"/></td>
+
+                            <td><br><img src = "house (3).png" class ="itemsize"><br><br><input class="item" type="radio" name="s3" value="4"/></td>
+
+                            <td><br><img src = "house (4).png" class ="itemsize"><br><br><input class="item" type="radio" name="s3" value="6"/></td>
+
+                            <td><br><img src = "house (2).png" class ="itemsize"><br><br><input class="item" type="radio" name="s3" value="8"/></td>
+
+                            <td><br><img src = "house (5).png" class ="itemsize"><br><br><input class="item" type="radio" name="s3" value="10"/></td>    
+
+                        </tr>
+
+                        <tr>
+
+                            <td>학업</td>
+
+                            <td><br><img src = "study (2).png" class ="itemsize"><br><br><input class="item" type="radio" name="s4" value="15"/></td>
+
+                            <td><br><img src = "study (4).png" class ="itemsize"><br><br><input class="item" type="radio" name="s4" value="12"/></td>
+
+                            <td><br><img src = "study (1).png" class ="itemsize"><br><br><input class="item" type="radio" name="s4" value="9"/></td>
+
+                            <td><br><img src = "study (3).png" class ="itemsize"><br><br><input class="item" type="radio" name="s4" value="6"/></td>
+
+                            <td><br><img src = "hm.gif" class ="itemsize"><br><br><input class="item" type="radio" name="s4" value="3"/></td>    
+
+                        </tr>
+
+                        <tr>
+
+                            <td>취미</td>
+
+                            <td><br><img src = "exer (5).png" class ="itemsize"><br><br><input class="item" type="radio" name="s5" value="2"/></td>
+
+                            <td><br><img src = "exer (4).png" class ="itemsize"><br><br><input class="item" type="radio" name="s5" value="4"/></td>
+
+                            <td><br><img src = "exer (3).png" class ="itemsize"><br><br><input class="item" type="radio" name="s5" value="6"/></td>
+
+                            <td><br><img src = "exer (2).png" class ="itemsize"><br><br><input class="item" type="radio" name="s5" value="8"/></td>
+
+                            <td><br><img src = "exer (1).png" class ="itemsize"><br><br><input class="item" type="radio" name="s5" value="10"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>용돈</td>
+                            <td><br><img src = "c (5).png" class ="itemsize"><br><br><input class="item" type="radio" name="s6" value="15"/></td>
+
+                            <td><br><img src = "c (1).png" class ="itemsize"><br><br><input class="item" type="radio" name="s6" value="12"/></td>
+
+                            <td><br><img src = "c (4).png" class ="itemsize"><br><br><input class="item" type="radio" name="s6" value="9"/></td>
+
+                            <td><br><img src = "c (3).png" class ="itemsize"><br><br><input class="item" type="radio" name="s6" value="6"/></td>
+
+                            <td><br><img src = "c (2).png" class ="itemsize"><br><br><input class="item" type="radio" name="s6" value="3"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>유학</td>
+
+                            <td><br><img src = "search.png" class ="itemsize"><br><br><input class="item" type="radio" name="s7" value="2"/></td>
+
+                            <td><br><img src = "search.png" class ="itemsize"><br><br><input class="item" type="radio" name="s7" value="4"/></td>
+
+                            <td><br><img src = "search.png" class ="itemsize"><br><br><input class="item" type="radio" name="s7" value="6"/></td>
+
+                            <td><br><img src = "search.png" class ="itemsize"><br><br><input class="item" type="radio" name="s7" value="8"/></td>
+
+                            <td><br><img src = "search.png" class ="itemsize"><br><br><input class="item" type="radio" name="s7" value="10"/></td> 
+
+                        </tr>
+
+                        <tr>
+
+                            <td>여행</td>
+
+                            <td><br><img src = "tr (2).png" class ="itemsize"><br><br><input class="item" type="radio" name="s8" value="2"/></td>
+
+                            <td><br><img src = "tr (3).png" class ="itemsize"><br><br><input class="item" type="radio" name="s8" value="4"/></td>
+
+                            <td><br><img src = "tr (1).png" class ="itemsize"><br><br><input class="item" type="radio" name="s8" value="6"/></td>
+
+                            <td><br><img src = "tr (5).png" class ="itemsize"><br><br><input class="item" type="radio" name="s8" value="8"/></td>
+
+                            <td><br><img src = "tr (4).png" class ="itemsize"><br><br><input class="item" type="radio" name="s8" value="10"/></td> 
+
+                        </tr>
+
+
+					</tbody>
+
+				</table>  
+
+			</form>
+
+			<button id="actres" class="btn btn-primary" data-title="결과보기" style="width: 100%;" data-toggle="modal" data-target="#result" >결과보기</button>   
+<br>
+<br>
+<br>
+<br>
+
+        </div>
+
+  </div>
+    </div>
+
+    
+
+    
+
+    
+
+<div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+
+      <div class="modal-dialog">
+
+    <div class="modal-content">
+
+          <div class="modal-header">
+
+        <h4 class="modal-title custom_align" id="Heading">Result</h4>
+
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>        
+
+      </div>
+
+          <div class="modal-body">
+
+          <div class="form-group">
+
+        총점: <input class="form-control " type="text" name="sum" readonly />
+
+        </div>
+
+        <div class="form-group">
+
+        난이도: <input class="form-control " type="text" name="skintype" readonly />
+
+        </div>
+
+        <div class="form-group">
+
+        합산 : <textarea rows="4" class="form-control" id="itemtypelist" readonly /></textarea>           
+
+        </div>
+
+      </div>
+
+          <div class="modal-footer ">
+
+        <button type="button" class="btn btn-primary btn-lg" style="width: 100%;">  </button>
+
+      </div>
+
+        </div>
+  </div>
+
+    </div>
+
+    
+
+</div>   
+
+
+
+<script>
+
+function skinscore(){
+
+    var score = 0;
+
+    var score1 = 0;	
+
+	var isResult = true ;
+
+	var itemResult = new Array() ;
+
+	var itemlist = "";
+
+    $(".item:checked").each(function(){
+
+        score+=parseInt($(this).val(),10);
+
+    });
+
+    $("input[name=sum]").val(score);
+
+	var skintypeArray = new Array("easy","normal","hard");
+
+	var itemtypeArray = new Array("흙","동","은","금", "다이아", "수퍼다이아");
+
+	if(score < 59)  {		
+
+		$("input[name=skintype]").val(skintypeArray[0]);
+
+		itemResult[0] = itemtypeArray[0];
+
+	}
+
+	else if(score < 81) {
+
+		$("input[name=skintype]").val(skintypeArray[1]);
+
+		itemResult[0] = itemtypeArray[1];
+
+	}
+
+	else {
+
+		itemResult[0] = itemtypeArray[2];
+
+		$("input[name=skintype]").val(skintypeArray[2]);
+
+		if($("input[name=s7]:checked").val() > 7)  {
+
+			itemResult[1] = itemtypeArray[3];
+
+		}
+
+		$(".skin1:checked").each(function(){
+
+	        score1+=parseInt($(this).val(),10);
+
+	    });
+
+		
+
+		if(score1 >7) itemResult[2] = itemtypeArray[4];
+
+				
+
+		if($("input[name=s13]:checked").val() > 0) {
+
+			itemResult[3] = itemtypeArray[5];
+
+		}		
+
+	}
+
+	for(k=0;k<itemResult.length;k++){
+
+		if(itemResult[k]) {		
+
+			itemlist = itemlist + "당신의 수저는 " + itemResult[k] + "색입니다.\n";
+
+		}
+
+		
+
+	}
+
+	$("#itemtypelist").val(itemlist);
+
+	var rsrchChk = $("#research input[type=radio]");
+
+	$(':radio').each(function () {
+
+		name = $(this).attr('name');
+
+		if (isResult && !$(':radio[name="' + name + '"]:checked').length){ isResult = false;}
+
+			console.log(isResult);
+
+		});
+
+
+
+
+
+	if(isResult) $("#actres").show();
+
+}
+
+$().ready(function(){
+
+	$("#actres").hide();
+
+    $("input").change(function(){
+
+        skinscore()
+
+    });
+
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
+
