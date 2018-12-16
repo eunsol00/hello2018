@@ -1,0 +1,646 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+
+<title>인생계산서</title>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<style>
+
+@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'netmarbleL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleL.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body {background-color: #F3F4F5; cursor: default;}
+
+td{text-align:center;}
+
+h4{text-align:center; font-family:'yg-jalnan'; font-size:4em; top:0px;}
+
+h5{font-size: 1.25em; height:80px; line-height: 1.58;  margin:0; padding-right: 0.5em; ;font-weight: bold; color:gray;}
+
+p{text-align: left; font-size:1.2em;  color: white; font-weight: 400; line-height:1.75em; font-family:"netmarbleL"; color:black; }
+
+h3{text-align: left; font-size:1.2em;  color: white;  font-weight: 400; line-height:1.75em; font-family:"netmarbleL"; color:black; }
+
+
+table td{}
+tbody tr td:first-child {text-align:left; padding:1.5em; left:70px;}
+td {font-family:'BMJUA'; font-size: 1.3em; color:brown; left:30px;}
+
+input[type='radio'] {visibility:hidden;}
+
+input[type='radio']:after {width:2em; height:1em;
+
+        border-radius: 0.75em;
+        background-color: #fff;
+
+        content: '';
+
+        display: inline-block;
+
+        visibility: visible;
+
+        border: 2px solid #8d8d8e;
+
+}
+
+input[type='radio']:checked:after {
+
+        background-color: gray;
+
+        content: '';
+
+        display: inline-block;
+
+        visibility: visible;
+
+        border: 1px solid #8d8d8e;
+     
+
+ }
+
+.table {width:1300px; height:700px; background:white; left:150px; padding:1em;}
+#actres{top:500px;height:50px;}
+.itemsize{margin-left:27px; width:100px; height:100px;}
+.itemsize2{width:50px;}
+#s1{position: absolute; top:35px; left:1020px;}
+.popover431198{position:absolute; right:800px;}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#box11{position:relative; top:10px; width:1300px; height:335px;}
+#box111{position:absolute; left:90px; width:550px; height:150px; }
+#box112{position:absolute; left:710px; width:550px; height:150px; }
+
+.footbox{width:310px; height:200px; left:140px; float:left; margin-top:3.5em; text-align: left;}
+.footerimage2 {height: 240px; overflow hidden;  margin-top:0px;}
+.footerimage2 img{width: 55%; margin:0px;}
+
+#title_text1_11 {text-align: left; font-size:0.9em; padding-left:110px; white-space: 15em; padding-top:20px; color: white;}
+#title_text1_12 {text-align: left; font-size:1.3em;  padding-left:110px; white-space: 15em; color: white; font-weight: bold;
+  height:40px; margin:0; padding-right: 0.5em; font-weight: 800;}  
+#title_text1_13 {text-align: left; font-size:0.9em; padding-left:3px; white-space: 15em; padding-top:20px; color: white; left:110px;}
+
+#foot_box{width: 1300px; height: 230px; background:#38373e; top:0px; position: relative; margin: auto;}
+
+#recipt {position: relative; top:425px; left:0px; width:1500px; height:100px; margin: auto;}
+.col-md-12 {position:relative;margin:0;}
+.btn-primary{}
+
+#receiptbox{position:absolute; width:600px; height:800px; top:-520px; left:80px; opacity:0.7; }
+#receiptbox img{width:100%;}
+
+#receiptbox2{position:absolute; width:600px; height:800px; top:200px; right:-120px; opacity: 0.5; }
+#receiptbox2 img{width:110%;}
+
+#coinbox{position:absolute; width:600px; height:200px; top:230px; left:-50px;opacity:0.9;}
+#coinbox img{width:20%;}
+
+#coinbox2{position:absolute; width:600px; height:200px; top:350px; left:50px;opacity:0.8;}
+#coinbox2 img{width:20%;}
+
+#coinbox3{position:absolute; width:600px; height:200px; top:420px; left:10px;opacity:1;}
+#coinbox3 img{width:20%;}
+
+
+
+
+.arrow_box {
+  display: none;
+  position: absolute;
+  padding: 16px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;  
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  margin-left: 60px;
+}
+
+.arrow_box:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+img:hover + p.arrow_box {
+  display: block;
+}
+
+
+
+</style>
+<div id ="receiptbox">
+  <img src="receipt.png">
+</div>
+<div id ="receiptbox2">
+  <img src="receipt2.png">
+</div>
+
+<div id ="coinbox">
+  <img src="coin.png">
+</div>
+<div id ="coinbox2">
+  <img src="coin2.png">
+</div>
+
+<div id ="coinbox3">
+  <img src="coin2.png">
+</div>
+
+
+
+
+
+
+<div id = "table">
+    </div>
+    <div id="recipt">
+  <img src="recipp.png">
+</div>
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-12">
+
+        <h4> 인생계산서 </h4>
+<br>
+<br>
+<div id = "box11">
+  <div id = "box111">
+  <h3>여러분은 지금의 삶에 얼마나 만족하고 계시나요?<br>돈은 평소 의식하고 있는 것 이상으로 우리의 인생에 영향을 미치고 있습니다.
+<br>일상적인 쇼핑부터 사는 집의 크기, 옷이나 소지품, 평소에 가는 레스토랑 등도 <br>주머니 사정에 따라 달라지니까요.
+평소에 의식하고 있지 않지만 우리는 수입<br>자산별로 완전히 다른 종류의 인생을 살고 있음을 부정할 수 없습니다.
+
+</h3>
+  </div>
+
+<div id="box112">
+  <h3>수입에 관계없이 삶이 동일해야 한다는 ‘공평론’은 이상적이지만<br>우리 눈에 보이지 않을 뿐 카스트 제도는 여전히 존재하는듯 합니다.<br>어떤 게임에선 어렵거나 쉬운 정도에 따라 난이도를 나눕니다.
+만약<br>내 인생을 자유롭게 정할 수 있다면 얼마 만큼의 난이도가 매겨질까요?
+<br>딱 1년 만큼의 인생, 당신의 난이도를 측정해드립니다.</h3>
+ </div>
+ </div>
+
+   <div class="table-responsive">                 
+
+   <form id="research" class="form-horizontal" >
+
+  	<table class="table">
+
+<div id="s1">
+
+
+  <audio id="Bubble"> <source src="Bubble.mp3" type="audio/mpeg"> </audio>
+
+<script type="text/javascript">
+  var toggle = "off";
+
+  window.onscroll = function(){
+        Bubble.play(); 
+  } 
+</script>
+
+<script>
+  $(document).ready(
+    function(){ $('[data-toggle="popover"]').popover();}
+  );
+</script>
+
+<br>
+<br>
+
+			<tbody>
+				<tr>
+          <td><br>의상</td>
+
+          <td><br><br><<img src = "tshirt.png" class ="itemsize"><p class="arrow_box">명품</p><br><br><input class="item" type="radio" name="s1" value="30000000"/><br></td>
+
+          <td><br><br><img src = "tshirt2.png" class ="itemsize"><p class="arrow_box">브랜드</p><br><br><input class="item" type="radio" name="s1" value="2080000"/></td>
+
+          <td><br><br><img src = "tshirt3.png" class ="itemsize"><p class="arrow_box">보세</p><br><br><input class="item" type="radio" name="s1" value="1400000"/></td>
+
+          <td><br><br><img src = "tshirt4.png" class ="itemsize"><p class="arrow_box">폭탄 세일</p><br><br><input class="item" type="radio" name="s1" value="320000"/></td>
+
+          <td><br><br><img src = "tshirt5.png" class ="itemsize"><p class="arrow_box">프로 환경지킴이</p><br><br><input class="item" type="radio" name="s1" value="100000"/><br></td>        
+      </tr>
+
+      <tr>
+
+          <td>식사</td>
+
+          <td><br><<img src = "e (1).png" class ="itemsize"><p class="arrow_box">셰프의 요리</p><br><br><input class="item" type="radio" name="s2" value="19800000"/><br></td>
+
+          <td><br><img src = "e (2).png" class ="itemsize"><p class="arrow_box">건강식</p><br><br><input class="item" type="radio" name="s2" value="2400000"/><br></td>
+
+          <td><br><img src = "e (3).png" class ="itemsize"><p class="arrow_box">패스트푸드</p><br><br><input class="item" type="radio" name="s2" value="3600000"/><br></td>
+
+          <td><br><img src = "e (4).png" class ="itemsize"><p class="arrow_box">원푸드</p><br><br><input class="item" type="radio" name="s2" value="4320000"/><br></td>
+
+          <td><br><img src = "e (5).png" class ="itemsize"><p class="arrow_box">단식</p><br><br><input class="item" type="radio" name="s2" value="600000"/><br></td>          
+
+      </tr>
+
+      <tr>
+
+          <td>집</td>
+
+          <td><br><<img src = "house (1).png" class ="itemsize"><p class="arrow_box">석유왕 궁궐</p><br><br><input class="item" type="radio" name="s3" value="16700000000"/><br></td>
+
+          <td><br><img src = "house (3).png" class ="itemsize"><p class="arrow_box">한남동 단독주택</p><br><br><input class="item" type="radio" name="s3" value="2920000000"/><br></td>
+
+          <td><br><img src = "house (4).png" class ="itemsize"><p class="arrow_box">도심 아파트</p><br><br><input class="item" type="radio" name="s3" value="120000000"/><br></td>
+
+          <td><br><img src = "house (2).png" class ="itemsize"><p class="arrow_box">지방 전세</p><br><br><input class="item" type="radio" name="s3" value="45000000"/><br></td>
+
+          <td><br><img src = "house (5).png" class ="itemsize"><p class="arrow_box">나는 자연인이다</p><br><br><input class="item" type="radio" name="s3" value="1200000"/><br></td>    
+
+      </tr>
+
+      <tr>
+
+          <td>학업</td>
+
+          <td><br><<img src = "study (2).png" class ="itemsize"><p class="arrow_box">고액과외</p><br><br><input class="item" type="radio" name="s4" value="50000000"/><br></td>
+
+          <td><br><img src = "study (4).png" class ="itemsize"><p class="arrow_box">학원</p><br><br><input class="item" type="radio" name="s4" value="22000000"/><br></td>
+
+          <td><br><img src = "study (1).png" class ="itemsize"><p class="arrow_box">인강</p><br><br><input class="item" type="radio" name="s4" value="4800000"/><br></td>
+
+          <td><br><img src = "study (3).png" class ="itemsize"><p class="arrow_box">자습</p><br><br><input class="item" type="radio" name="s4" value="900000"/><br></td>
+
+          <td><br><img src = "hm.gif" class ="itemsize"><p class="arrow_box">그런거 안키운다</p><br><br><input class="item" type="radio" name="s4" value="400000"/><br></td>    
+
+      </tr>
+
+      <tr>
+
+          <td>취미</td>
+
+          <td><br><<img src = "exer (5).png" class ="itemsize"><p class="arrow_box">패러 글라이딩</p><br><br><input class="item" type="radio" name="s5" value="12000000"/><br></td>
+
+          <td><br><img src = "exer (4).png" class ="itemsize"><p class="arrow_box">공연 </p><br><br><input class="item" type="radio" name="s5" value="2880000"/><br></td>
+
+          <td><br><img src = "exer (3).png" class ="itemsize"><p class="arrow_box">영화</p><br><br><input class="item" type="radio" name="s5" value="408000"/><br></td>
+
+          <td><br><img src = "exer (2).png" class ="itemsize"><p class="arrow_box">수영</p><br><br><input class="item" type="radio" name="s5" value="2400000"/><br></td>
+
+          <td><br><img src = "exer (1).png" class ="itemsize"><p class="arrow_box">트래킹</p><br><br><input class="item" type="radio" name="s5" value="80000"/><br></td> 
+
+      </tr>
+
+      <tr>
+
+          <td>적금</td>
+
+
+          <td><br><<img src = "c (5).png" class ="itemsize"><p class="arrow_box">집주인 고정수익</p><br><br><input class="item" type="radio" name="s6" value="10000000"/><br></td>
+
+          <td><br><img src = "c (1).png" class ="itemsize"><p class="arrow_box">월 백</p><br><br><input class="item" type="radio" name="s6" value="1000000"/><br></td>
+
+          <td><br><img src = "c (4).png" class ="itemsize"><p class="arrow_box">월 오십</p><br><br><input class="item" type="radio" name="s6" value="500000"/><br></td>
+
+          <td><br><img src = "c (3).png" class ="itemsize"><p class="arrow_box">월 이십</p><br><br><input class="item" type="radio" name="s6" value="200000"/><br></td>
+
+          <td><br><img src = "c (2).png" class ="itemsize"><p class="arrow_box">욜로</p><br><br><input class="item" type="radio" name="s6" value="0"/><br></td> 
+
+      </tr>
+
+      <tr>
+
+          <td>어학연수</td>
+
+          <td><br><<img src = "visa.png" class ="itemsize"><p class="arrow_box">풀 서포트 1년!</p><br><br><input class="item" type="radio" name="s7" value="42000000"/><br></td>
+
+          <td><br><img src = "search.png" class ="itemsize"><p class="arrow_box">1년!</p><br><br><input class="item" type="radio" name="s7" value="22000000"/><br></td>
+
+          <td><br><img src = "uniform.png" class ="itemsize"><p class="arrow_box">1년+알바</p><br><br><input class="item" type="radio" name="s7" value="900000"/><br></td>
+
+          <td><br><img src = "clock.png" class ="itemsize"><p class="arrow_box">반년</p><br><br><input class="item" type="radio" name="s7" value="10200000"/><br></td>
+
+          <td><br><img src = "no-entry.png" class ="itemsize"><p class="arrow_box">필요없음</p><br><br><input class="item" type="radio" name="s7" value="0"/><br></td> 
+
+      </tr>
+
+      <tr>
+
+          <td>여행</td>
+
+          <td><br><<img src = "tr (2).png" class ="itemsize"><p class="arrow_box">세계일주</p><br><br><input class="item" type="radio" name="s8" value="30000000"/><br></td>
+
+          <td><br><img src = "tr (3).png" class ="itemsize"><p class="arrow_box">해외여행</p><br><br><input class="item" type="radio" name="s8" value="5000000"/><br></td>
+
+          <td><br><img src = "tr (1).png" class ="itemsize"><p class="arrow_box">국내여행</p><br><br><input class="item" type="radio" name="s8" value="1000000"/><br></td>
+
+          <td><br><img src = "tr (5).png" class ="itemsize"><p class="arrow_box">자전거여행</p><br><br><input class="item" type="radio" name="s8" value="400000"/><br></td>
+
+          <td><br><img src = "tr (4).png" class ="itemsize"><p class="arrow_box">국토대장정</p><br><br><input class="item" type="radio" name="s8" value="550000"/><br></td> 
+
+          <td><br><br><br>　　</td> 
+      </tr>
+    </tbody>
+  </table>  
+
+			</form>
+
+			<button id="actres" class="btn btn-primary" data-title="결과보기" style="width: 100%;" data-toggle="modal" data-target="#result">결과보기</button>   
+<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<br>
+<br>
+<br>
+
+        </div>
+
+  </div>
+    </div>
+
+    
+
+    <div class="modal fade" id="result" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+
+    <div class="modal-dialog">
+
+    <div class="modal-content">
+
+       <div class="modal-header">
+
+        <h4 class="modal-title custom_align" id="Heading">Result</h4>
+
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>        
+
+      </div>
+
+          <div class="modal-body">
+
+          <div class="form-group">
+
+        합계: <input class="form-control " type="text" name="sum" readonly />
+
+        </div>
+
+        <div class="form-group">
+
+        난이도: <input class="form-control " type="text" name="skintype" readonly />
+
+        </div>
+
+        <div class="form-group">
+
+        결과 : <textarea rows="4" class="form-control" id="itemtypelist" readonly /></textarea>           
+
+        </div>
+
+      </div>
+
+          <div class="modal-footer ">
+
+        <button type="button" class="btn btn-primary btn-lg" style="width: 100%;"></button>
+
+      </div>
+
+        </div>
+  </div>
+
+    </div>
+
+    
+
+</div>   
+
+
+
+<script>
+
+function skinscore(){
+
+  var score = 0;
+
+  var score1 = 0;	
+
+	var isResult = true ;
+
+	var itemResult = new Array() ;
+
+	var itemlist = "";
+
+    $(".item:checked").each(function(){
+
+        score+=parseInt($(this).val(),10);
+
+    });
+
+    $("input[name=sum]").val(score);
+
+	var skintypeArray = new Array("Easy","Normal","Hard","Extreme","Hell");
+
+	var itemtypeArray = new Array("절약형이네요. 이렇게 보내면 병원비가 더 나올지도 몰라요. 건강을 챙겨요!",
+    "노력형이네요. 조금 따분하겠지만 충분히 즐길 수 있겠어요!",
+    "욜로욜로, 즐김형이군요! 이렇게 지낼 수만 있다면… 혼자 힘으론 역부족이겠어요.", 
+    "풍족하네요. 상위 10% 당신이 소문의 금수저?", 
+    "호화롭네요. 상위 0.1% 당신이 전설의 다이아몬드 수저?");
+
+
+
+if(score < 75000000)  {   
+
+    $("input[name=skintype]").val(skintypeArray[0]);
+
+    itemResult[0] = itemtypeArray[0];
+
+  }
+
+
+  else if(score < 135000000) {
+
+    $("input[name=skintype]").val(skintypeArray[1]);
+
+    itemResult[0] = itemtypeArray[1];
+
+  }
+
+  else if(score < 235000000) {
+
+    $("input[name=skintype]").val(skintypeArray[2]);
+
+    itemResult[0] = itemtypeArray[2];
+
+  }
+    else if(score < 5035000000) {
+
+    $("input[name=skintype]").val(skintypeArray[3]);
+
+    itemResult[0] = itemtypeArray[3];
+
+  }
+    else if(score < 167000000000) {
+
+    $("input[name=skintype]").val(skintypeArray[4]);
+
+    itemResult[0] = itemtypeArray[4];
+
+  }
+
+
+
+  else {
+
+    itemResult[0] = itemtypeArray[2];
+
+    $("input[name=skintype]").val(skintypeArray[2]);
+
+    if($("input[name=s7]:checked").val() > 7)  {
+
+      itemResult[1] = itemtypeArray[3];
+
+    }
+
+    $(".skin1:checked").each(function(){
+
+          score1+=parseInt($(this).val(),10);
+
+      });
+
+    
+
+    if(score1 >7) itemResult[2] = itemtypeArray[4];
+
+        
+
+    if($("input[name=s13]:checked").val() > 0) {
+
+      itemResult[3] = itemtypeArray[5];
+
+    }   
+
+
+
+  }
+
+  for(k=0;k<itemResult.length;k++){
+
+    if(itemResult[k]) {   
+
+      itemlist = itemlist + "당신의 1년 계획은 " + itemResult[k] + "\n";
+
+    }
+
+    
+
+
+		
+
+	}
+
+	$("#itemtypelist").val(itemlist);
+
+	var rsrchChk = $("#research input[type=radio]");
+
+	$(':radio').each(function () {
+
+		name = $(this).attr('name');
+
+		if (isResult && !$(':radio[name="' + name + '"]:checked').length){ isResult = false;}
+
+			console.log(isResult);
+
+		});
+
+
+
+
+
+	if(isResult) $("#actres").show();
+
+}
+
+$().ready(function(){
+
+	$("#actres").hide();
+
+    $("input").change(function(){
+
+        skinscore()
+
+    });
+
+});
+
+
+</script>
+
+
+
+<div id="foot_box"> 
+   <div class="footbox"> 
+   <h5 id="title_text1_12">CREATOR<br>-</h5>
+      <p id="title_text1_11">
+      Hankyeng university<br>Digital Publishing<br>Cho eun sol<br></p>
+   </div>
+
+   <div class="footbox"> 
+<h5 id="title_text1_12">GENERAL<br>-</h5>
+    <p id="title_text1_11">uscho2016@gmail.com<br>
+      010-1515-1515<br>
+      eunsol00.github.io/hello2018 <br>
+   </p>
+   </div>
+
+        <div class="footbox"> 
+   <h5 id="title_text1_12">STAY CONNECTED<br>-</h5>
+   <a href="http://gmail.com"> <img src="google-plus.png" id="title_text1_11"></a> 
+  <a href="http://facebook.com"> <img src="facebook.png" id="title_text1_13"></a>
+
+
+   </div>
+     <div class="footbox"> 
+   <h5 id="title_text1_12">MENU<br>-</h5>
+      <p id="title_text1_11">
+     Copyright © eunsol00<br>All rights reserved.</p><br>
+
+   </p>
+   </div>
+
+
+
+   </div>
+   <div class="clear"></div>
+  </div>
+</footer>
+
+
+
+
+
+</body>
+
+</html>
+
